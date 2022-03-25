@@ -37,13 +37,13 @@ public class HandOfCards {
 
     public List<PlayingCard> onlyHearts(int n){
         return this.cards.stream()
-                .filter(card -> card.getSuit() == 'C')
+                .filter(card -> card.getSuit() == '❤')
                 .toList();
     }
 
     public boolean hasQueenOfSpades(int n){
         return this.cards.stream()
-                .filter(card -> card.getSuit() == 'S')
+                .filter(card -> card.getSuit() == '♠')
                 .anyMatch(card -> card.getFace()== 12);
     }
 
