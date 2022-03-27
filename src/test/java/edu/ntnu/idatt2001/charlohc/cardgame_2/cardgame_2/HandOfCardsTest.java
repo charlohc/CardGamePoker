@@ -14,10 +14,10 @@ HandOfCards handOfCards;
 
     @BeforeEach
     public void reset(){
-         card1 = new PlayingCard('C',1);
-         card2 = new PlayingCard('C',2);
-         card3 = new PlayingCard('C',3);
-         card4 = new PlayingCard('D',2);
+         card1 = new PlayingCard('❤',1);
+         card2 = new PlayingCard('❤',2);
+         card3 = new PlayingCard('❤',3);
+         card4 = new PlayingCard('♢',2);
         flushList = new ArrayList<>();
         flushList.add(card1);
         flushList.add(card2);
@@ -40,23 +40,23 @@ HandOfCards handOfCards;
 
     @Test
     public void sumOfCardsTest(){
-        Assertions.assertEquals(6,handOfCards.sumOfCards(3));
+        Assertions.assertEquals(6,handOfCards.sumOfCards());
     }
 
     @Test
     public void onlyHeartsTrue(){
-        flushList.add(new PlayingCard('D',3));
-        Assertions.assertEquals(3,handOfCards.onlyHearts(4).size());
+        flushList.add(new PlayingCard('♢',3));
+        Assertions.assertEquals(3,handOfCards.onlyHearts().size());
     }
 
     @Test
     public void hasQueenOfSpadesFalse(){
-        Assertions.assertFalse(handOfCards.hasQueenOfSpades(3));
+        Assertions.assertFalse(handOfCards.hasQueenOfSpades());
     }
 
     @Test
     public void hasQueenOfSpadesTrue(){
-        flushList.add(new PlayingCard('S',12));
-        Assertions.assertTrue(handOfCards.hasQueenOfSpades(4));
+        flushList.add(new PlayingCard('♠',12));
+        Assertions.assertTrue(handOfCards.hasQueenOfSpades());
     }
 }

@@ -6,37 +6,18 @@ import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import java.util.ArrayList;
 
+/**
+ * Controller class
+ * contains methods used in JavaFxml file
+ */
+
 public class Controller {
-       @FXML
-    private Text face1;
 
     @FXML
-    private Text face2;
+    private Text face1,face2,face3,face4,face5;
 
     @FXML
-    private Text face3;
-
-    @FXML
-    private Text face4;
-
-    @FXML
-    private Text face5;
-
-
-    @FXML
-    private Text suit1;
-
-    @FXML
-    private Text suit2;
-
-    @FXML
-    private Text suit3;
-
-    @FXML
-    private Text suit4;
-
-    @FXML
-    private Text suit5;
+    private Text suit1,suit2,suit3,suit4,suit5;
 
     @FXML
     private TextField sumOfFaces;
@@ -50,12 +31,16 @@ public class Controller {
     @FXML
     private CheckBox queenOfSpades;
 
-
     private DeckOfCards deck = new DeckOfCards();
+
     private ArrayList<PlayingCard> handOfCards;
 
-
-//TODO: find a better methode to do DealHand() methode, only assign one face and suit, for loop, etc
+    /**
+     * Method DealHand()
+     * Uses methode dealHand in DeckOfCards class to get five random cards, gets the face and suit of these five cards
+     * and displays them
+     */
+//TODO: find a better methode to do DealHand() methode
     @FXML
     public void DealHand(){
         sumOfFaces.clear();
@@ -84,22 +69,29 @@ public class Controller {
 
     }
 
+    /**
+     * Method CheckHand()
+     * Contains several checks, first it retains the five random cards that has been set earlier
+     * Calculates the sum of faces, and returns it in a text
+     * Checks if the hand of cards contains any hearts, if it does it prints out a string with those cards
+     * Checks if the hand contains the queen of spades, or it has flush, if so, the checkboxes are marked as selected
+     */
     @FXML
     public void CheckHand(){
         HandOfCards checkHand = new HandOfCards(handOfCards);
-        sumOfFaces.setText(String.valueOf(checkHand.sumOfCards(5)));
+        sumOfFaces.setText(String.valueOf(checkHand.sumOfCards()));
 
-        if(checkHand.onlyHearts(5).isEmpty()){
+        if(checkHand.onlyHearts().isEmpty()){
             cardsOfHeart.setText("No hearts");
         }else {
-            cardsOfHeart.setText(String.valueOf(checkHand.onlyHearts(5).toString()));
+            cardsOfHeart.setText(String.valueOf(checkHand.onlyHearts().toString()));
         }
 
         if(checkHand.hasFlush(5)){
             flush.setSelected(true);
         }
 
-        if(checkHand.hasQueenOfSpades(5)){
+        if(checkHand.hasQueenOfSpades()){
             queenOfSpades.setSelected(true);
         }
 

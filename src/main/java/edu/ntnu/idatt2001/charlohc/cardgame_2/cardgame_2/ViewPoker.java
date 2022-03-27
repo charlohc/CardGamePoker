@@ -8,6 +8,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Class ViewPoker, shows the methods and classes visually with the help of JavaFx
+ */
 public class ViewPoker extends Application {
     @Override
     public void start(Stage stage) throws IOException {
