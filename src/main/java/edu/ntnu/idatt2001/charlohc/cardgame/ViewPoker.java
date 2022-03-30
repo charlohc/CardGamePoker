@@ -1,7 +1,6 @@
-package edu.ntnu.idatt2001.charlohc.cardgame_2.cardgame_2;
+package edu.ntnu.idatt2001.charlohc.cardgame;
 
 import javafx.application.Application;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;

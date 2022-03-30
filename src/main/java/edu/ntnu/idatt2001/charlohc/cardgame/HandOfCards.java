@@ -1,4 +1,4 @@
-package edu.ntnu.idatt2001.charlohc.cardgame_2.cardgame_2;
+package edu.ntnu.idatt2001.charlohc.cardgame;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class HandOfCards {
      * @param n, int that describes how many cards there is in the hand of cards
      */
     public HandOfCards(DeckOfCards d, int n){
-        cards = d.dealHand(n);
+        this.cards = d.dealHand(n);
     }
 
     /**

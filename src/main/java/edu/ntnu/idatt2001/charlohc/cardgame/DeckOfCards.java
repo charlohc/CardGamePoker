@@ -1,4 +1,4 @@
-package edu.ntnu.idatt2001.charlohc.cardgame_2.cardgame_2;
+package edu.ntnu.idatt2001.charlohc.cardgame;
 import java.util.ArrayList;
 
 //TODO: make check to make sure that doesn't add the same card twice

@@ -1,4 +1,4 @@
-package edu.ntnu.idatt2001.charlohc.cardgame_2.cardgame_2;
+package edu.ntnu.idatt2001.charlohc.cardgame;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
@@ -50,13 +50,15 @@ HandOfCards handOfCards;
     }
 
     @Test
-    public void hasQueenOfSpadesFalse(){
-        Assertions.assertFalse(handOfCards.hasQueenOfSpades());
-    }
-
-    @Test
     public void hasQueenOfSpadesTrue(){
         flushList.add(new PlayingCard('♠',12));
         Assertions.assertTrue(handOfCards.hasQueenOfSpades());
     }
+
+    @Test
+    public void hasQueenOfSpadesFalse(){
+        Assertions.assertFalse(handOfCards.hasQueenOfSpades());
+    }
+
+
 }

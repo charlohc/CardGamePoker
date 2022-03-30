@@ -1,4 +1,4 @@
-package edu.ntnu.idatt2001.charlohc.cardgame_2.cardgame_2;
+package edu.ntnu.idatt2001.charlohc.cardgame;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.CheckBox;

@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                edu.ntnu.idatt2001.charlohc.cardgame_2.cardgame_2/edu.ntnu.idatt2001.charlohc.cardgame_2.cardgame_2.ViewPoker
+                                edu.ntnu.idatt2001.charlohc.cardgame_2.cardgame_2/edu.ntnu.idatt2001.charlohc.cardgame.ViewPoker
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
