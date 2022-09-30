@@ -11,7 +11,7 @@ public class DeckOfCards {
 
     private ArrayList<PlayingCard> deck = new ArrayList<PlayingCard>();
     int[] faces = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13};
-    char[] suits = {'♠', '❤', '♢', '♣'};
+    char[] suits = {'♠', '❤', '♦', '♣'};
 
     /**
      * Constructor where each suit gets assigned to a number

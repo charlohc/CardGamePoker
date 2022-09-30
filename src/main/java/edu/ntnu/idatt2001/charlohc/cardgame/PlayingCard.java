@@ -11,7 +11,7 @@ import java.util.Objects;
  * @version 2020-01-10
  */
 public class PlayingCard {
-    private final char suit; // '♠'=spade, '❤'=heart, '♢'=diamonds, '♣'=clubs
+    private final char suit; // '♠'=spade, '❤'=heart, '♦'=diamonds, '♣'=clubs
     private final int face; // a number between 1 and 13
 
     /**
@@ -38,7 +38,7 @@ public class PlayingCard {
 
     /**
      * Returns the suit of the card, '♠' for Spades,
-     * '❤' for Heart, '♢' for Diamonds and '♣' for clubs
+     * '❤' for Heart, '♦' for Diamonds and '♣' for clubs
      *
      * @return the suit of the card
      */

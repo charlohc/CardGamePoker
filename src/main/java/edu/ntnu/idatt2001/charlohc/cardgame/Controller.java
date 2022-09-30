@@ -40,7 +40,7 @@ public class Controller {
      * Uses methode dealHand in DeckOfCards class to get five random cards, gets the face and suit of these five cards
      * and displays them
      */
-//TODO: find a better methode to do DealHand() methode
+
     @FXML
     public void DealHand(){
         sumOfFaces.clear();
@@ -50,24 +50,28 @@ public class Controller {
 
 
         handOfCards = deck.dealHand(5);
-        face1.setText(String.valueOf(handOfCards.get(0).getFace()));
-        face2.setText(String.valueOf(handOfCards.get(1).getFace()));
-        face3.setText(String.valueOf(handOfCards.get(2).getFace()));
-        face4.setText(String.valueOf(handOfCards.get(3).getFace()));
-        face5.setText(String.valueOf(handOfCards.get(4).getFace()));
 
-        String viewSuit1= String.valueOf(handOfCards.get(0).getSuit());
-        String viewSuit2= String.valueOf(handOfCards.get(1).getSuit());
-        String viewSuit3= String.valueOf(handOfCards.get(2).getSuit());
-        String viewSuit4= String.valueOf(handOfCards.get(3).getSuit());
-        String viewSuit5= String.valueOf(handOfCards.get(4).getSuit());
-        suit1.setText(viewSuit1);
-        suit2.setText(viewSuit2);
-        suit3.setText(viewSuit3);
-        suit4.setText(viewSuit4);
-        suit5.setText(viewSuit5);
+
+            face1.setText(String.valueOf(handOfCards.get(0).getFace()));
+            face2.setText(String.valueOf(handOfCards.get(1).getFace()));
+            face3.setText(String.valueOf(handOfCards.get(2).getFace()));
+            face4.setText(String.valueOf(handOfCards.get(3).getFace()));
+            face5.setText(String.valueOf(handOfCards.get(4).getFace()));
+
+            String viewSuit1 = String.valueOf(handOfCards.get(0).getSuit());
+            String viewSuit2 = String.valueOf(handOfCards.get(1).getSuit());
+            String viewSuit3 = String.valueOf(handOfCards.get(2).getSuit());
+            String viewSuit4 = String.valueOf(handOfCards.get(3).getSuit());
+            String viewSuit5 = String.valueOf(handOfCards.get(4).getSuit());
+
+            suit1.setText(viewSuit1);
+            suit2.setText(viewSuit2);
+            suit3.setText(viewSuit3);
+            suit4.setText(viewSuit4);
+            suit5.setText(viewSuit5);
 
     }
+
 
     /**
      * Method CheckHand()
@@ -84,7 +88,7 @@ public class Controller {
         if(checkHand.onlyHearts().isEmpty()){
             cardsOfHeart.setText("No hearts");
         }else {
-            cardsOfHeart.setText(String.valueOf(checkHand.onlyHearts().toString()));
+            cardsOfHeart.setText(checkHand.onlyHearts().toString().replace("[", "").replace("]", ""));
         }
 
         if(checkHand.hasFlush(5)){

@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>edu.ntnu.idatt2001.charlohc.cardgame_2</groupId>
+    <groupId>edu.ntnu.idatt2001.charlohc.cardgame</groupId>
     <artifactId>CardGame_2</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>CardGame_2</name>
@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                edu.ntnu.idatt2001.charlohc.cardgame_2.cardgame_2/edu.ntnu.idatt2001.charlohc.cardgame.ViewPoker
+                               edu.ntnu.idatt2001.charlohc.cardgame.ViewPoker
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
