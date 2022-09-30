@@ -46,7 +46,10 @@ public class Controller {
         sumOfFaces.clear();
         cardsOfHeart.clear();
         flush.setSelected(false);
+        flush.setDisable(true);
         queenOfSpades.setSelected(false);
+        queenOfSpades.setDisable(true);
+
 
 
         handOfCards = deck.dealHand(5);
@@ -93,10 +96,13 @@ public class Controller {
 
         if(checkHand.hasFlush(5)){
             flush.setSelected(true);
+            flush.setDisable(false);
         }
 
         if(checkHand.hasQueenOfSpades()){
             queenOfSpades.setSelected(true);
+            queenOfSpades.setDisable(false);
+
         }
 
     }
